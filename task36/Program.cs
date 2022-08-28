@@ -6,15 +6,11 @@
 int[] array = new int[10];
 int sumnumbers = 0;
 //int index = 0;
-for (int i = 0; i < array.Length; i++)
+for (int i = 1; i < array.Length; i+=2)
 {
     array[i] = new Random().Next(-10, 21);
-    while(i % 2 != 0)
-    {
+
         sumnumbers += array[i];
-        i++;
-    }
-    
 
 }
 Console.Write(string.Join("," , array));

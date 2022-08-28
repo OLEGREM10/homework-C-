@@ -19,3 +19,20 @@ for (int i = 0; i < array.Length; i++)
 Console.WriteLine(string.Join("," , array));
 
 Console.Write(count);
+
+
+
+// int[] FillArrayWithRandomNumbers(int size, int leftRange, int rightRange)  // метод возвращает массив на size элементов
+// {
+//     int[] array = new int[size];  //задаем массив на size элементов
+
+//     Random random = new Random();
+//     for (int i = 0; i < size; i++)
+//     {
+//         array[i] = random.Next(leftRange, rightRange +1);
+
+//     }
+
+//     return array;
+
+// }
