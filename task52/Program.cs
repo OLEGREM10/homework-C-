@@ -13,7 +13,8 @@ Console.WriteLine("Введите n");
 int n = Convert.ToInt32(Console.ReadLine()); //количество столбцов
 int[,] ourMatrix = GetMatrix(m, n, -10, 10);
 PrintMatrix(ourMatrix);
-ArithmeticMeanl(sum);
+//int[,] sum = ArithmeticMeanl(ourMatrix);
+ArithmeticMeanl(ourMatrix);
 
 int[,] GetMatrix(int rowsCount, int columnsCount, int leftRange, int rightRange)
 {
@@ -43,15 +44,16 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-int ArithmeticMeanl(int[,] matrix)    
+void ArithmeticMeanl( int[,] matrix)    
 {
-    int sum = 0;
+      int sum = 0;
     for (int i = 0; i < matrix.GetLength(0); i++)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             for(i = 0; i < matrix.GetLength(0); j++)
             {
+                
                 sum = sum + matrix[i,j];
             
             }
@@ -59,5 +61,5 @@ int ArithmeticMeanl(int[,] matrix)
             
         }
     }
-   return sum;
+   
 }   
